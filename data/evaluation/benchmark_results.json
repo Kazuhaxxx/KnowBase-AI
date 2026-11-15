@@ -1,0 +1,251 @@
+[
+  {
+    "retrieval_mode": "semantic",
+    "question_count": 60,
+    "k_value": 5,
+    "recall_at_k": 1.0,
+    "precision_at_k": 0.6767,
+    "mrr": 0.9917,
+    "context_relevance": 0.9889,
+    "llm_evaluated": false,
+    "metrics_by_category": {
+      "Microsoft 365": {
+        "count": 12,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.7667,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "VPN": {
+        "count": 6,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.6667,
+        "mrr": 1.0,
+        "context_relevance": 0.8889
+      },
+      "Troubleshooting": {
+        "count": 6,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.4,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Hardware": {
+        "count": 11,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.8,
+        "mrr": 0.9545,
+        "context_relevance": 1.0
+      },
+      "Network": {
+        "count": 6,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.6,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Account and Access": {
+        "count": 7,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.6571,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Software": {
+        "count": 5,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.68,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "IT Policies": {
+        "count": 3,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.4,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "General IT Support": {
+        "count": 1,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.4,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Out of Scope": {
+        "count": 3,
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      }
+    },
+    "notes": "Automated deterministic retrieval evaluation on 60 benchmark questions (K=5). LLM-as-judge metrics omitted because live LLM evaluation was not requested."
+  },
+  {
+    "retrieval_mode": "hybrid",
+    "question_count": 60,
+    "k_value": 5,
+    "recall_at_k": 0.9833,
+    "precision_at_k": 0.6867,
+    "mrr": 0.975,
+    "context_relevance": 0.9722,
+    "llm_evaluated": false,
+    "metrics_by_category": {
+      "Microsoft 365": {
+        "count": 12,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.7667,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "VPN": {
+        "count": 6,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.6667,
+        "mrr": 1.0,
+        "context_relevance": 0.8889
+      },
+      "Troubleshooting": {
+        "count": 6,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.4667,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Hardware": {
+        "count": 11,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.8909,
+        "mrr": 0.9545,
+        "context_relevance": 1.0
+      },
+      "Network": {
+        "count": 6,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.6,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Account and Access": {
+        "count": 7,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.6857,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Software": {
+        "count": 5,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.64,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "IT Policies": {
+        "count": 3,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.4,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "General IT Support": {
+        "count": 1,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.6,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Out of Scope": {
+        "count": 3,
+        "recall_at_k": 0.6667,
+        "precision_at_k": 0.6667,
+        "mrr": 0.6667,
+        "context_relevance": 0.6667
+      }
+    },
+    "notes": "Automated deterministic retrieval evaluation on 60 benchmark questions (K=5). LLM-as-judge metrics omitted because live LLM evaluation was not requested."
+  },
+  {
+    "retrieval_mode": "hybrid_rerank",
+    "question_count": 60,
+    "k_value": 5,
+    "recall_at_k": 1.0,
+    "precision_at_k": 0.64,
+    "mrr": 1.0,
+    "context_relevance": 1.0,
+    "llm_evaluated": false,
+    "metrics_by_category": {
+      "Microsoft 365": {
+        "count": 12,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.7,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "VPN": {
+        "count": 6,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5333,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Troubleshooting": {
+        "count": 6,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.4667,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Hardware": {
+        "count": 11,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.8182,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Network": {
+        "count": 6,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.5667,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Account and Access": {
+        "count": 7,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.6,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Software": {
+        "count": 5,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.52,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "IT Policies": {
+        "count": 3,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.4,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "General IT Support": {
+        "count": 1,
+        "recall_at_k": 1.0,
+        "precision_at_k": 0.6,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      },
+      "Out of Scope": {
+        "count": 3,
+        "recall_at_k": 1.0,
+        "precision_at_k": 1.0,
+        "mrr": 1.0,
+        "context_relevance": 1.0
+      }
+    },
+    "notes": "Automated deterministic retrieval evaluation on 60 benchmark questions (K=5). LLM-as-judge metrics omitted because live LLM evaluation was not requested."
+  }
+]

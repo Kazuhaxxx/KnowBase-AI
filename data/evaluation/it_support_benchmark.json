@@ -1,0 +1,483 @@
+[
+  {
+    "id": "Q01",
+    "category": "Microsoft 365",
+    "question": "Microsoft Teams is not detecting my headset microphone during meetings. How do I fix it?",
+    "expected_document": "m365_troubleshooting_guide.md",
+    "expected_answer": "Open Teams Settings > Devices, select your physical headset under Audio devices, run Make a test call, and verify Windows 11 Privacy & security > Microphone allows desktop apps.",
+    "expected_keywords": ["Settings", "Devices", "Make a test call", "Microphone"]
+  },
+  {
+    "id": "Q02",
+    "category": "Microsoft 365",
+    "question": "OneDrive is stuck on Processing Changes with error 0x8004de40. What should I run?",
+    "expected_document": "m365_troubleshooting_guide.md",
+    "expected_answer": "Verify system clock automatic time, pause and resume syncing, or press Win+R and run %localappdata%\\Microsoft\\OneDrive\\onedrive.exe /reset without deleting local folders.",
+    "expected_keywords": ["0x8004de40", "onedrive.exe /reset", "Pause syncing"]
+  },
+  {
+    "id": "Q03",
+    "category": "Microsoft 365",
+    "question": "I get Access Denied when opening a SharePoint or Teams shared channel link in my browser.",
+    "expected_document": "m365_troubleshooting_guide.md",
+    "expected_answer": "Confirm you are signed in with your @novatech-demo.internal corporate profile rather than a personal Microsoft account, clear identity cookies for login.microsoftonline.com, and click Request Access.",
+    "expected_keywords": ["Access Denied", "novatech-demo.internal", "login.microsoftonline.com", "Request Access"]
+  },
+  {
+    "id": "Q04",
+    "category": "Microsoft 365",
+    "question": "Should I delete my local OneDrive folder before running onedrive.exe /reset?",
+    "expected_document": "m365_troubleshooting_guide.md",
+    "expected_answer": "No. Do not manually delete local OneDrive folders before running /reset because unsynced edits could be lost.",
+    "expected_keywords": ["Do not manually delete", "/reset", "unsynced"]
+  },
+  {
+    "id": "Q05",
+    "category": "Microsoft 365",
+    "question": "Where in Windows 11 do I verify desktop apps can access my Teams microphone?",
+    "expected_document": "m365_troubleshooting_guide.md",
+    "expected_answer": "Open Windows 11 Settings > Privacy & security > Microphone and enable Let desktop apps access your microphone.",
+    "expected_keywords": ["Privacy & security", "Microphone", "desktop apps"]
+  },
+  {
+    "id": "Q06",
+    "category": "Microsoft 365",
+    "question": "How long should I wait after running onedrive.exe /reset for the cloud icon to return?",
+    "expected_document": "m365_troubleshooting_guide.md",
+    "expected_answer": "Wait up to 3 minutes for the OneDrive icon to reappear, or launch OneDrive manually from the Start Menu.",
+    "expected_keywords": ["3 minutes", "Start Menu", "OneDrive"]
+  },
+  {
+    "id": "Q07",
+    "category": "Microsoft 365",
+    "question": "How do I configure Microsoft Outlook desktop for the first time with Exchange Online?",
+    "expected_document": "outlook_configuration_and_sync.md",
+    "expected_answer": "Open Outlook, enter your @novatech-demo.internal email, approve Microsoft Authenticator MFA, and allow 5-15 minutes for Cached Exchange Mode to sync.",
+    "expected_keywords": ["Cached Exchange Mode", "Microsoft Authenticator", "12 months"]
+  },
+  {
+    "id": "Q08",
+    "category": "Microsoft 365",
+    "question": "Outlook says Working Offline and is stuck on Updating Inbox. How do I reconnect?",
+    "expected_document": "outlook_configuration_and_sync.md",
+    "expected_answer": "Go to the Send / Receive tab and click Work Offline to toggle back online, check outlook.office.com, and test outlook.exe /safe.",
+    "expected_keywords": ["Work Offline", "Send / Receive", "outlook.exe /safe"]
+  },
+  {
+    "id": "Q09",
+    "category": "Microsoft 365",
+    "question": "How do I start Outlook in Safe Mode to test for broken COM add-ins?",
+    "expected_document": "outlook_configuration_and_sync.md",
+    "expected_answer": "Run outlook.exe /safe and then disable third-party add-ins under File > Options > Add-ins > Manage: COM Add-ins.",
+    "expected_keywords": ["outlook.exe /safe", "COM Add-ins"]
+  },
+  {
+    "id": "Q10",
+    "category": "Microsoft 365",
+    "question": "Outlook shows error 0x8004010F and search is incomplete. How do I rebuild the OST file safely?",
+    "expected_document": "outlook_configuration_and_sync.md",
+    "expected_answer": "Verify recent emails exist in outlook.office.com, close OUTLOOK.EXE completely, open %localappdata%\\Microsoft\\Outlook, rename the .ost file to .ost.bak, and relaunch Outlook.",
+    "expected_keywords": ["0x8004010F", "OUTLOOK.EXE", ".ost.bak", "%localappdata%\\Microsoft\\Outlook"]
+  },
+  {
+    "id": "Q11",
+    "category": "Microsoft 365",
+    "question": "A shared mailbox was granted to me but is not appearing in Outlook. What should I do?",
+    "expected_document": "outlook_configuration_and_sync.md",
+    "expected_answer": "Wait up to 60 minutes for AutoMapping, restart Outlook from the system tray, or add it manually under File > Account Settings > More Settings > Advanced > Add.",
+    "expected_keywords": ["60 minutes", "AutoMapping", "Advanced"]
+  },
+  {
+    "id": "Q12",
+    "category": "Microsoft 365",
+    "question": "How many months of email does Outlook Cached Exchange Mode sync by default?",
+    "expected_document": "outlook_configuration_and_sync.md",
+    "expected_answer": "The default Cached Exchange Mode synchronization window is 12 months of email.",
+    "expected_keywords": ["12 months", "Cached Exchange Mode"]
+  },
+  {
+    "id": "Q13",
+    "category": "VPN",
+    "question": "What gateway address does NovaPulse Secure Client connect to?",
+    "expected_document": "vpn_connection_troubleshooting.md",
+    "expected_answer": "NovaPulse Secure Client connects to vpn-gw.novatech-demo.internal with Auto-Select Region and Microsoft Authenticator MFA approval within 45 seconds.",
+    "expected_keywords": ["vpn-gw.novatech-demo.internal", "45 seconds", "NovaPulse"]
+  },
+  {
+    "id": "Q14",
+    "category": "VPN",
+    "question": "I get error VPN-403 when trying to connect to NovaPulse VPN. Why does that happen?",
+    "expected_document": "vpn_connection_troubleshooting.md",
+    "expected_answer": "VPN-403 indicates an expired MFA prompt, a recent password change requiring a workstation reboot, or Intune marking the device non-compliant (check Defender and BitLocker in Company Portal).",
+    "expected_keywords": ["VPN-403", "MFA", "BitLocker", "Company Portal"]
+  },
+  {
+    "id": "Q15",
+    "category": "VPN",
+    "question": "NovaPulse VPN fails with ERR_TUNNEL_CONNECTION_FAILED on hotel Wi-Fi. How do I resolve it?",
+    "expected_document": "vpn_connection_troubleshooting.md",
+    "expected_answer": "Accept the hotel captive portal in a browser first, disable personal consumer VPNs, run ipconfig /flushdns, and switch NovaPulse protocol from UDP/DTLS to TCP-443 Fallback.",
+    "expected_keywords": ["ERR_TUNNEL_CONNECTION_FAILED", "captive portal", "ipconfig /flushdns", "TCP-443 Fallback"]
+  },
+  {
+    "id": "Q16",
+    "category": "VPN",
+    "question": "What DNS IP address does NovaPulse corporate split-tunnel use?",
+    "expected_document": "vpn_connection_troubleshooting.md",
+    "expected_answer": "Split-tunnel corporate DNS uses 10.240.0.10 and routes 10.0.0.0/8 internal traffic through the tunnel.",
+    "expected_keywords": ["10.240.0.10", "10.0.0.0/8", "Split Tunneling"]
+  },
+  {
+    "id": "Q17",
+    "category": "VPN",
+    "question": "Internal hostnames fail to resolve over VPN. What diagnostic command should I run before escalating?",
+    "expected_document": "vpn_connection_troubleshooting.md",
+    "expected_answer": "Run nslookup intranet.novatech-demo.internal and include the output when escalating to the Network Operations Desk.",
+    "expected_keywords": ["nslookup", "intranet.novatech-demo.internal"]
+  },
+  {
+    "id": "Q18",
+    "category": "VPN",
+    "question": "How long do I have to approve the MFA push notification when connecting to NovaPulse VPN?",
+    "expected_document": "vpn_connection_troubleshooting.md",
+    "expected_answer": "Approve the Microsoft Authenticator push notification within 45 seconds.",
+    "expected_keywords": ["45 seconds", "Microsoft Authenticator"]
+  },
+  {
+    "id": "Q19",
+    "category": "Troubleshooting",
+    "question": "Windows Update fails with error 0x80070005 or 0x80240034. What commands repair system files?",
+    "expected_document": "windows_os_support_procedures.md",
+    "expected_answer": "Ensure 15 GB free space on C:, run the Windows Update troubleshooter, and run DISM /Online /Cleanup-Image /RestoreHealth followed by sfc /scannow in Administrator Terminal.",
+    "expected_keywords": ["0x80070005", "DISM", "sfc /scannow", "15 GB"]
+  },
+  {
+    "id": "Q20",
+    "category": "Troubleshooting",
+    "question": "My Windows 11 laptop has been slow and uptime is 20 days. Should I shut down or restart?",
+    "expected_document": "windows_os_support_procedures.md",
+    "expected_answer": "Perform a full Restart rather than Shut Down when uptime exceeds 14 days because Fast Startup preserves kernel state on shutdown.",
+    "expected_keywords": ["14 days", "Restart", "Fast Startup"]
+  },
+  {
+    "id": "Q21",
+    "category": "Troubleshooting",
+    "question": "Can I terminate MsMpEng.exe in Task Manager when CPU usage is high?",
+    "expected_document": "windows_os_support_procedures.md",
+    "expected_answer": "No. Never terminate MsMpEng.exe (Microsoft Defender) or IntuneManagementExtension services; contact the IT Service Desk if >80% CPU persists over 30 minutes.",
+    "expected_keywords": ["MsMpEng.exe", "Microsoft Defender", "IntuneManagementExtension"]
+  },
+  {
+    "id": "Q22",
+    "category": "Troubleshooting",
+    "question": "My workstation had two BSOD crashes today. What information does IT need?",
+    "expected_document": "windows_os_support_procedures.md",
+    "expected_answer": "Log a Priority-2 IT ticket with the exact Stop Code and timestamp so IT can inspect C:\\Windows\\Minidump, and disconnect new third-party USB docks.",
+    "expected_keywords": ["Stop Code", "Minidump", "Priority-2", "BSOD"]
+  },
+  {
+    "id": "Q23",
+    "category": "Troubleshooting",
+    "question": "How much free disk space is required on drive C: before running Windows Updates?",
+    "expected_document": "windows_os_support_procedures.md",
+    "expected_answer": "Ensure at least 15 GB of free disk space is available on drive C:.",
+    "expected_keywords": ["15 GB", "C:"]
+  },
+  {
+    "id": "Q24",
+    "category": "Troubleshooting",
+    "question": "Which tool should I use to install approved Dell or Lenovo BIOS and chipset drivers?",
+    "expected_document": "windows_os_support_procedures.md",
+    "expected_answer": "Use Company Portal, Dell Command | Update, or Lenovo Vantage to install approved BIOS and chipset driver updates.",
+    "expected_keywords": ["Company Portal", "Dell Command", "Lenovo Vantage", "BIOS"]
+  },
+  {
+    "id": "Q25",
+    "category": "Hardware",
+    "question": "How do I install and release jobs on the office Follow-Me printer?",
+    "expected_document": "printer_troubleshooting_manual.md",
+    "expected_answer": "Add FollowMe-Color on print.novatech-demo.internal under Printers & scanners, send the job, and tap your Employee RFID Badge at any MFP card reader.",
+    "expected_keywords": ["FollowMe-Color", "print.novatech-demo.internal", "RFID Badge"]
+  },
+  {
+    "id": "Q26",
+    "category": "Hardware",
+    "question": "How long do unreleased Follow-Me print jobs stay in the queue before expiring?",
+    "expected_document": "printer_troubleshooting_manual.md",
+    "expected_answer": "Unreleased print jobs expire automatically after 24 hours for document confidentiality.",
+    "expected_keywords": ["24 hours", "expire"]
+  },
+  {
+    "id": "Q27",
+    "category": "Hardware",
+    "question": "My print job is stuck on Deleting and the printer appears Offline. What should I check?",
+    "expected_document": "printer_troubleshooting_manual.md",
+    "expected_answer": "Verify you are on NovaTech-Corp Wi-Fi (not NovaTech-Guest), cancel stalled jobs in the queue, and restart the Spooler service (Restart-Service -Name Spooler -Force).",
+    "expected_keywords": ["NovaTech-Guest", "Spooler", "Restart-Service"]
+  },
+  {
+    "id": "Q28",
+    "category": "Hardware",
+    "question": "The office printer displays Fuser Error 50.2 after a paper jam. How should I handle it?",
+    "expected_document": "printer_troubleshooting_manual.md",
+    "expected_answer": "Do not use sharp objects inside the hot fuser; place an Out of Service note on the unit and log a Workplace Hardware ticket with the printer asset tag.",
+    "expected_keywords": ["Fuser Error 50.2", "Out of Service", "asset tag"]
+  },
+  {
+    "id": "Q29",
+    "category": "Hardware",
+    "question": "Why can't I print while connected to NovaTech-Guest Wi-Fi?",
+    "expected_document": "printer_troubleshooting_manual.md",
+    "expected_answer": "NovaTech-Guest cannot reach internal print servers; switch to NovaTech-Corp Wi-Fi or wired Ethernet.",
+    "expected_keywords": ["NovaTech-Guest", "NovaTech-Corp", "print servers"]
+  },
+  {
+    "id": "Q30",
+    "category": "Hardware",
+    "question": "What is the UNC path for the corporate Follow-Me print queue?",
+    "expected_document": "printer_troubleshooting_manual.md",
+    "expected_answer": "The corporate Follow-Me print queue is \\\\print.novatech-demo.internal\\FollowMe-Color.",
+    "expected_keywords": ["print.novatech-demo.internal", "FollowMe-Color"]
+  },
+  {
+    "id": "Q31",
+    "category": "Network",
+    "question": "What is the difference between NovaTech-Corp and NovaTech-Guest Wi-Fi networks?",
+    "expected_document": "network_connectivity_and_wifi.md",
+    "expected_answer": "NovaTech-Corp uses 802.1X certificate authentication for managed laptops with internal server access; NovaTech-Guest is an isolated internet-only captive portal for visitors and personal phones.",
+    "expected_keywords": ["802.1X", "NovaTech-Corp", "NovaTech-Guest", "captive portal"]
+  },
+  {
+    "id": "Q32",
+    "category": "Network",
+    "question": "My laptop got a 169.254.x.x IP address and says Connected, No Internet. How do I fix it?",
+    "expected_document": "network_connectivity_and_wifi.md",
+    "expected_answer": "Toggle Airplane Mode, verify NovaTech-Corp SSID, and run ipconfig /release, ipconfig /renew, and ipconfig /flushdns.",
+    "expected_keywords": ["169.254", "DHCP", "ipconfig /release", "ipconfig /renew"]
+  },
+  {
+    "id": "Q33",
+    "category": "Network",
+    "question": "My browser shows DNS_PROBE_FINISHED_NXDOMAIN on internal sites. What DNS settings should be set?",
+    "expected_document": "network_connectivity_and_wifi.md",
+    "expected_answer": "Remove hardcoded public DNS like 8.8.8.8 and set DNS server assignment to Automatic (DHCP) so internal domains use 10.240.0.10 / 10.240.0.11.",
+    "expected_keywords": ["DNS_PROBE_FINISHED_NXDOMAIN", "8.8.8.8", "Automatic (DHCP)", "10.240.0.10"]
+  },
+  {
+    "id": "Q34",
+    "category": "Network",
+    "question": "Windows asks to trust radius.novatech-demo.internal and fails to join NovaTech-Corp Wi-Fi.",
+    "expected_document": "network_connectivity_and_wifi.md",
+    "expected_answer": "Open Company Portal and click Sync to renew your corporate machine certificate, or plug into an Ethernet port to sync policy.",
+    "expected_keywords": ["radius.novatech-demo.internal", "Company Portal", "Sync", "Ethernet"]
+  },
+  {
+    "id": "Q35",
+    "category": "Network",
+    "question": "Can I set 8.8.8.8 as static DNS on my corporate Wi-Fi adapter?",
+    "expected_document": "network_connectivity_and_wifi.md",
+    "expected_answer": "No, static custom DNS servers like 8.8.8.8 break internal *.novatech-demo.internal domains; DNS server assignment must be Automatic (DHCP).",
+    "expected_keywords": ["8.8.8.8", "Automatic (DHCP)", "novatech-demo.internal"]
+  },
+  {
+    "id": "Q36",
+    "category": "Network",
+    "question": "What should I check if a wired Ethernet dock link light does not turn on?",
+    "expected_document": "network_connectivity_and_wifi.md",
+    "expected_answer": "Test an alternate wall jack or reseat the USB-C cable.",
+    "expected_keywords": ["wall jack", "USB-C", "link light"]
+  },
+  {
+    "id": "Q37",
+    "category": "Account and Access",
+    "question": "What are the NovaTech password length and history rules for self-service password reset?",
+    "expected_document": "password_and_mfa_access.md",
+    "expected_answer": "Passwords must be at least 14 characters, cannot reuse the last 12 passwords, and cannot contain your first name, last name, or 'novatech'.",
+    "expected_keywords": ["14 characters", "12 passwords", "sspr.novatech-demo.internal"]
+  },
+  {
+    "id": "Q38",
+    "category": "Account and Access",
+    "question": "After resetting my password remotely, what must I do so Windows cached login updates?",
+    "expected_document": "password_and_mfa_access.md",
+    "expected_answer": "Connect to NovaPulse VPN (or campus Wi-Fi), lock your session with Win + L, and unlock it to update the local cached password.",
+    "expected_keywords": ["Win + L", "NovaPulse VPN", "cached password"]
+  },
+  {
+    "id": "Q39",
+    "category": "Account and Access",
+    "question": "How many failed login attempts trigger an account lockout and how long does it last?",
+    "expected_document": "password_and_mfa_access.md",
+    "expected_answer": "Accounts lock automatically for 15 minutes after 5 consecutive failed login attempts; check Windows Credential Manager for stale saved passwords.",
+    "expected_keywords": ["15 minutes", "5 consecutive", "Credential Manager"]
+  },
+  {
+    "id": "Q40",
+    "category": "Account and Access",
+    "question": "I lost my old phone and need to set up Microsoft Authenticator MFA on a new phone.",
+    "expected_document": "password_and_mfa_access.md",
+    "expected_answer": "Call the IT Service Desk Verification Line (ext. 4357) or visit the Walk-Up Desk with Employee Photo ID to receive a 2-hour Temporary Access Pass (TAP).",
+    "expected_keywords": ["Temporary Access Pass", "ext. 4357", "Employee Photo ID", "2 hours"]
+  },
+  {
+    "id": "Q41",
+    "category": "Account and Access",
+    "question": "Where can I manage my MFA methods if I still have access to my old smartphone?",
+    "expected_document": "password_and_mfa_access.md",
+    "expected_answer": "Add the new phone before resetting the old one at https://mysignins.microsoft.com/security-info.",
+    "expected_keywords": ["mysignins.microsoft.com/security-info", "Microsoft Authenticator"]
+  },
+  {
+    "id": "Q42",
+    "category": "Account and Access",
+    "question": "What is the URL for the NovaTech Self-Service Password Reset portal?",
+    "expected_document": "password_and_mfa_access.md",
+    "expected_answer": "The NovaTech Identity Portal URL is https://sspr.novatech-demo.internal.",
+    "expected_keywords": ["sspr.novatech-demo.internal", "Can't access your account"]
+  },
+  {
+    "id": "Q43",
+    "category": "Software",
+    "question": "How do standard employees install pre-approved software like VS Code or Docker Desktop without admin rights?",
+    "expected_document": "software_installation_guidelines.md",
+    "expected_answer": "Open Company Portal (Windows) or NovaTech Self Service (macOS), search the Approved Software Catalog, and click Install.",
+    "expected_keywords": ["Company Portal", "NovaTech Self Service", "Approved Software Catalog"]
+  },
+  {
+    "id": "Q44",
+    "category": "Software",
+    "question": "How long does security review take for non-standard licensed software requests?",
+    "expected_document": "software_installation_guidelines.md",
+    "expected_answer": "Submit a Software Procurement & Security Review ticket with business justification, privacy policy link, and manager approval; Security Engineering completes review in 5 business days.",
+    "expected_keywords": ["5-business-day", "Software Procurement", "cost-center"]
+  },
+  {
+    "id": "Q45",
+    "category": "Software",
+    "question": "Am I allowed to install Google Drive Personal or download .exe installers from the web?",
+    "expected_document": "software_installation_guidelines.md",
+    "expected_answer": "No. Unverified .exe/.msi/.dmg installers and personal cloud sync tools like Dropbox Personal or Google Drive Personal are prohibited on managed endpoints.",
+    "expected_keywords": ["Prohibited", "Google Drive Personal", "SmartScreen"]
+  },
+  {
+    "id": "Q46",
+    "category": "Software",
+    "question": "What browser extensions are blocked by NovaTech software policy?",
+    "expected_document": "software_installation_guidelines.md",
+    "expected_answer": "Browser extensions that capture full page contents or proxy traffic without security approval are blocked.",
+    "expected_keywords": ["Browser extensions", "proxy traffic", "security approval"]
+  },
+  {
+    "id": "Q47",
+    "category": "Software",
+    "question": "Which macOS application is used to install approved software packages?",
+    "expected_document": "software_installation_guidelines.md",
+    "expected_answer": "macOS users install approved packages through NovaTech Self Service.",
+    "expected_keywords": ["NovaTech Self Service", "macOS"]
+  },
+  {
+    "id": "Q48",
+    "category": "Hardware",
+    "question": "My Thunderbolt docking station is not detecting dual external monitors. How do I power drain it?",
+    "expected_document": "hardware_troubleshooting_and_rma.md",
+    "expected_answer": "Verify the 130W/180W AC power brick is connected, plug into a Thunderbolt port, unplug dock power for 30 seconds, hold dock power button 10 seconds, and check Win+P Extend.",
+    "expected_keywords": ["130W/180W", "30 seconds", "10 seconds", "Win + P"]
+  },
+  {
+    "id": "Q49",
+    "category": "Hardware",
+    "question": "Why does my laptop say Plugged In, Not Charging at 80%?",
+    "expected_document": "hardware_troubleshooting_and_rma.md",
+    "expected_answer": "Verify you use an OEM USB-C charger rated 65W or higher and check Power & battery settings for Smart Charging / Battery Health Manager capping charge at 80%; if needed perform a 20-second EC reset.",
+    "expected_keywords": ["65W", "80%", "Smart Charging", "20 seconds"]
+  },
+  {
+    "id": "Q50",
+    "category": "Hardware",
+    "question": "My laptop battery looks swollen and the trackpad is lifting. What should I do?",
+    "expected_document": "hardware_troubleshooting_and_rma.md",
+    "expected_answer": "Power off the device immediately, unplug AC power, and bring it directly to Workplace IT; never ship swollen batteries by standard courier.",
+    "expected_keywords": ["swollen", "power off", "Workplace IT", "courier"]
+  },
+  {
+    "id": "Q51",
+    "category": "Hardware",
+    "question": "Where can employees get a same-day hot-swap loaner laptop for Priority-1 hardware failures?",
+    "expected_document": "hardware_troubleshooting_and_rma.md",
+    "expected_answer": "Same-day hot-swap loaner laptops are issued at Building 1 & Building 3 IT Bars after logging a Hardware Repair / Loaner Request with your Asset Tag.",
+    "expected_keywords": ["Building 1", "Building 3", "Asset Tag", "loaner"]
+  },
+  {
+    "id": "Q52",
+    "category": "Hardware",
+    "question": "What minimum wattage USB-C OEM charger is required for corporate laptops?",
+    "expected_document": "hardware_troubleshooting_and_rma.md",
+    "expected_answer": "Corporate laptops require an original OEM USB-C charger rated for 65W or higher.",
+    "expected_keywords": ["65W", "OEM"]
+  },
+  {
+    "id": "Q53",
+    "category": "IT Policies",
+    "question": "What are the live IT Service Desk hours and emergency P1 response SLA?",
+    "expected_document": "general_it_support_policies.md",
+    "expected_answer": "Live IT Service Desk operates Monday-Friday 07:00-19:00 on ext. 4357; Priority 1 outages have a 15-minute initial response SLA and 4-hour target resolution.",
+    "expected_keywords": ["07:00–19:00", "15 minutes", "4 hours", "ext. 4357"]
+  },
+  {
+    "id": "Q54",
+    "category": "IT Policies",
+    "question": "An IT caller asked for my corporate password and MFA push approval. Should I share it?",
+    "expected_document": "general_it_support_policies.md",
+    "expected_answer": "No. Never share your corporate password, MFA push approvals, or Temporary Access Passes with anyone including IT staff.",
+    "expected_keywords": ["Never share", "IT staff", "MFA push"]
+  },
+  {
+    "id": "Q55",
+    "category": "IT Policies",
+    "question": "What is the target initial response and resolution time for a Priority 2 ticket?",
+    "expected_document": "general_it_support_policies.md",
+    "expected_answer": "Priority 2 tickets have an initial response SLA of 2 hours and target resolution of 1 business day.",
+    "expected_keywords": ["Priority 2", "2 hours", "1 business day"]
+  },
+  {
+    "id": "Q56",
+    "category": "General IT Support",
+    "question": "How do IT technicians retrieve a 48-digit BitLocker recovery key for a locked laptop?",
+    "expected_document": "it_only_intune_autopilot_playbook.md",
+    "expected_answer": "Verify caller identity, open Microsoft Intune Admin Center > Devices > All Devices, match the 8-character Key ID under Recovery Keys, and log disclosure in the ticket.",
+    "expected_keywords": ["BitLocker", "Intune Admin Center", "Key ID", "48-digit"]
+  },
+  {
+    "id": "Q57",
+    "category": "Account and Access",
+    "question": "What is the break-glass HSM vault name and credential expiration policy for Tier-0 AD accounts?",
+    "expected_document": "restricted_incident_response_runbook.md",
+    "expected_answer": "Break-glass accounts are stored in SecOps-Tier0-Alpha, require CISO On-Call and Principal Identity Architect dual-custody FIDO2 quorum, trigger ALERT-IAM-901, and expire after 4 hours.",
+    "expected_keywords": ["SecOps-Tier0-Alpha", "ALERT-IAM-901", "4 hours"]
+  },
+  {
+    "id": "Q58",
+    "category": "Out of Scope",
+    "question": "How do I configure BGP peering on an Arista spine switch in the Tokyo colocation rack?",
+    "expected_document": "NONE",
+    "expected_answer": "Insufficient documentation available; system must abstain rather than fabricate.",
+    "expected_keywords": []
+  },
+  {
+    "id": "Q59",
+    "category": "Out of Scope",
+    "question": "What is the internal database root password for the payroll Oracle ERP cluster?",
+    "expected_document": "NONE",
+    "expected_answer": "Insufficient documentation available; system must abstain rather than fabricate.",
+    "expected_keywords": []
+  },
+  {
+    "id": "Q60",
+    "category": "Out of Scope",
+    "question": "How do I compile a custom Linux kernel module for NVIDIA H100 InfiniBand drivers?",
+    "expected_document": "NONE",
+    "expected_answer": "Insufficient documentation available; system must abstain rather than fabricate.",
+    "expected_keywords": []
+  }
+]
+

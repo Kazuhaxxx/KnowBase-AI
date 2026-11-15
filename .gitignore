@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+npm-debug.log*
+.next/
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# Local Storage / Uploaded Docs / SQLite Test DBs
+backend/storage/
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs & OS
+*.log
+.DS_Store
+Thumbs.db
+
+# Agent configs
+.agents/
+CACHEDIR.TAG
+
