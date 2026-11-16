@@ -8,6 +8,15 @@
   <img src="https://img.shields.io/badge/Ollama%20%2B%20Gemini-Dual%20Engine-4285F4?style=for-the-badge" alt="Dual Engine" />
 </p>
 
+<p align="center">
+  <a href="https://sacred-rip-would-noted.trycloudflare.com" target="_blank">
+    <img src="https://img.shields.io/badge/LIVE%20DEMO-Open%20KnowBase%20AI-success?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Live Demo" />
+  </a>
+</p>
+
+> 🌐 **Interactive Live Demo:** [https://sacred-rip-would-noted.trycloudflare.com](https://sacred-rip-would-noted.trycloudflare.com)  
+> *Pre-seeded Demo Accounts:* **Employee** (`employee@novatech-demo.internal` / `EmployeeDemo!2026`) • **Admin** (`admin@novatech-demo.internal` / `AdminDemo!2026`)
+
 **KnowBase AI** is an enterprise-grade AI Knowledge Assistant powered by **Hybrid Retrieval-Augmented Generation (RAG)**. It allows organisations to index internal documentation across multiple domains (IT Troubleshooting, Company Policies, SOPs, HR Benefits, and Technical Documentation) and interact with them through a modern, ChatGPT-style conversational interface.
 
 Every generated answer is **strictly grounded in authorized internal documentation**, accompanied by **clickable citations and verbatim passage excerpts**, organized into **Knowledge Collections**, protected by **server-side Role-Based Access Control (RBAC)**, and verified through **quantitative retrieval evaluation benchmarks**.

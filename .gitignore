@@ -31,6 +31,7 @@ backend/storage/
 *.log
 .DS_Store
 Thumbs.db
+cloudflared.exe
 
 # Agent configs
 .agents/

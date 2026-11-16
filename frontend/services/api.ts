@@ -18,7 +18,7 @@ import type {
 } from "@/lib/types";
 
 const API_BASE =
-  process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") || "http://localhost:8000/api";
+  process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") || "/api";
 
 const TOKEN_STORAGE_KEY = "helpdesk_ai_token";
 
