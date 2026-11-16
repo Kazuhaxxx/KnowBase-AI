@@ -59,7 +59,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const handleDeleteConversation = async (e: React.MouseEvent, id: string) => {
     e.preventDefault();
     e.stopPropagation();
-    await api.deleteConversation(id);
+    try {
+      await api.deleteConversation(id);
+    } catch {
+      // Gracefully handle if conversation was already deleted
+    }
     setConversations((prev) => prev.filter((c) => c.id !== id));
     if (activeConversationId === id) {
       router.push("/");

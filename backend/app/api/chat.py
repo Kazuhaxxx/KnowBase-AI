@@ -209,10 +209,9 @@ def delete_conversation(
         .filter(Conversation.id == conversation_id, Conversation.user_id == current_user.id)
         .first()
     )
-    if conv is None:
-        raise HTTPException(status_code=404, detail="Conversation not found.")
-    db.delete(conv)
-    db.commit()
+    if conv is not None:
+        db.delete(conv)
+        db.commit()
 
 
 @router.get("/dashboard/summary")
