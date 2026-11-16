@@ -1,10 +1,9 @@
-﻿# ==============================================================
-# KnowBase AI — Stop Independent Local Services
-# ==============================================================
+# KnowBase AI - Stop Independent Local Services
 
 Write-Host "Stopping KnowBase AI services..." -ForegroundColor Yellow
 
-$RootPath = (Get-Item $PSScriptRoot).Parent.FullName
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$RootPath = (Get-Item $ScriptDir).Parent.FullName
 $pidFile = Join-Path $RootPath ".running_pids.json"
 
 if (Test-Path $pidFile) {
@@ -17,7 +16,6 @@ if (Test-Path $pidFile) {
     } catch {}
 }
 
-# Cleanup any orphaned processes on known ports
 $ports = @(8000, 3000)
 foreach ($p in $ports) {
     try {
@@ -30,8 +28,7 @@ foreach ($p in $ports) {
     } catch {}
 }
 
-# Stop cloudflared if running
 Get-Process -Name "cloudflared" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
 
-Write-Host "✓ All KnowBase AI background services have been stopped." -ForegroundColor Green
+Write-Host "[OK] All KnowBase AI background services have been stopped." -ForegroundColor Green
 Start-Sleep -Seconds 2
