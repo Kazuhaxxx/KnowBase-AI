@@ -38,6 +38,17 @@ async def lifespan(_: FastAPI):
                 seed_sample_documents(db, admin_user_id=admin_user.id if admin_user else None)
             finally:
                 db.close()
+
+        # Pre-warm AI embedding and reranker models so first user request is instant
+        try:
+            from app.services.embeddings.provider import get_embedding_service
+            from app.services.reranking.cross_encoder import get_reranker
+            logger.info("Pre-warming SentenceTransformer and CrossEncoder models...")
+            get_embedding_service()
+            get_reranker()
+            logger.info("AI models pre-warmed and ready.")
+        except Exception as exc:
+            logger.warning("Model pre-warm skipped: %s", exc)
     except Exception as exc:
         logger.warning("Startup DB initialization skipped or deferred: %s", exc)
     yield

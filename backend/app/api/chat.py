@@ -103,6 +103,8 @@ async def chat_stream(
     """Stream the grounded response and final citation payload as Server-Sent Events (SSE)."""
 
     async def event_generator() -> AsyncGenerator[str, None]:
+        # Send immediate initial SSE byte to keep tunnel connections open and prevent gateway timeouts
+        yield f"data: {json.dumps({'type': 'ping'})}\n\n"
         try:
             conv, user_msg, assistant_msg = await process_chat_turn(
                 db=db,
@@ -130,6 +132,9 @@ async def chat_stream(
             yield f"data: {json.dumps({'type': 'error', 'detail': str(exc)})}\n\n"
         except LLMUnavailableError as exc:
             yield f"data: {json.dumps({'type': 'error', 'detail': str(exc)})}\n\n"
+        except Exception as exc:
+            logger.exception("Unexpected error in chat stream: %s", exc)
+            yield f"data: {json.dumps({'type': 'error', 'detail': f'Generation error: {exc}'})}\n\n"
 
     return StreamingResponse(event_generator(), media_type="text/event-stream")
 

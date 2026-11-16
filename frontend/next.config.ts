@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: process.env.NEXT_STANDALONE === "true" ? "standalone" : undefined,
+  experimental: {
+    allowedDevOrigins: ["*.trycloudflare.com", "localhost:3000"],
+  },
   async rewrites() {
     return [
       {
